@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: royalblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    height: 60vh;
+    background: darkslategray;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* Lamp */
+.lamp-side {
+    flex: 1;
+    background: darkslateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lamp-container {
+    position: relative;
+    width: 200px;
+    height: 350px;
+}
+
+.lamp-base {
+    width: 90px;
+    height: 25px;
+    background: gray;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-pole {
+    width: 20px;
+    height: 150px;
+    background: #444;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-shade {
+    width: 200px;
+    height: 60px;
+    background: #333;
+    position: absolute;
+    top: 0;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.lamp-on {
+    background: gold;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+}
+
+/* Rope */
+.pull-rope {
+    width: 2px;
+    height: 80px;
+    background: #ccc;
+    position: absolute;
+    top: 60px;
+    left: 120px;
+}
+
+.rope-handle {
+    width: 15px;
+    height: 15px;
+    background: gold;
+    border-radius: 50%;
+    position: absolute;
+    top: 140px;
+    left: 113px;
+    cursor: pointer;
+}
+
+/* Login */
+.login-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+}
+
+.login-form {
+    background: #252525;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.login-form.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.login-form.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #111;
+    border: none;
+    color: white;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 10px;
+    background: pink;
+    border: none;
+    cursor: pointer;
+}
