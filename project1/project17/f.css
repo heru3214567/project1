@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(
+        -45deg,
+        #000428,
+        #004e92,
+        #1f1c2c,
+        #928dab
+    );
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+#particles{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.container{
+    position:relative;
+    z-index:10;
+    text-align:center;
+}
+
+.container h1{
+    color:white;
+    font-size:50px;
+    margin-bottom:40px;
+    letter-spacing:5px;
+    text-shadow:
+    0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 40px cyan;
+}
+
+.clock{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.box{
+    width:180px;
+    height:180px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border:2px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:0.5s;
+    box-shadow:
+    0 0 20px rgba(0,255,255,.3);
+}
+
+.box:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:
+    0 0 30px cyan,
+    0 0 60px cyan;
+}
+
+.box span{
+    color:white;
+    font-size:70px;
+    font-weight:bold;
+    text-shadow:
+    0 0 15px cyan;
+}
+
+.box p{
+    color:#ddd;
+    margin-top:10px;
+    font-size:20px;
+}
+
+.date{
+    margin-top:40px;
+}
+
+.date h2{
+    color:white;
+    font-size:30px;
+    text-shadow:0 0 10px white;
+}
+
+.greeting{
+    margin-top:20px;
+}
+
+.greeting h3{
+    color:gold;
+    font-size:35px;
+    text-shadow:
+    0 0 10px gold,
+    0 0 20px orange;
+}
+
+@media(max-width:768px){
+
+    .box{
+        width:130px;
+        height:130px;
+    }
+
+    .box span{
+        font-size:50px;
+    }
+
+    .container h1{
+        font-size:35px;
+    }
+
+    .greeting h3{
+        font-size:25px;
+    }
+}
